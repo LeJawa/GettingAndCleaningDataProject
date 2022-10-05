@@ -1,19 +1,4 @@
----
-title: "README"
-author: "Luis Escobar Sawa"
-output: html_document
----
 
-```{=html}
-<style type="text/css" rel="stylesheet">
-blockquote {
-    padding: 2px 20px;
-    margin: 0 0 10px;
-    font-size: 14px;
-    border-left: 5px solid #eee;
-}
-</style>
-```
 ## Project: Getting And Cleaning Data
 
 This is the repository for my submission to the Week 4 project of the
