@@ -2,9 +2,6 @@
 title: "README"
 author: "Luis Escobar Sawa"
 output: html_document
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
 
 ```{=html}
