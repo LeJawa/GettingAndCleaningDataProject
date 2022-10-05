@@ -15,8 +15,11 @@ script. The default name is "dataset.zip".
 ### Tidying the data
 
 The cleaning and tidying of the data is done by the script
-run_analysis.R. This script outputs a .txt file with the clean data. The
-default name for this output file is "tidy_data.txt" but it can be
+run_analysis.R. 
+It first merges all the original data, before calculating the average of each 
+variable for a given activity and subject.
+This script outputs a .txt file with the clean data. 
+The default name for this output file is "tidy_data.txt" but it can be
 changed at the start of the script.
 
 ### Tidy dataset
