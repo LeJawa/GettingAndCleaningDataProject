@@ -1,25 +1,20 @@
-file_name <- "dataset.zip"
-url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+source("helpers.R")
 
-# For some reason, downloading through R takes a long time
-# Here I set the timeout option to 600 seconds to allow for the whole download
+DATASET_FILENAME <- "dataset.zip"
 
-old_timeout = getOption("timeout")
-new_timeout = 600
+# Downloads dataset only if not already present
+if (!file.exists(DATASET_FILENAME)) {
+  download_dataset(DATASET_FILENAME)
+} else {
+  print("Zip file already exists")
+}
 
-print(paste0("Previous timeout option set to: ", old_timeout, "s"))
+# Extracts dataset only if not already extracted
+if (!file.exists("UCI HAR Dataset")){
+  unzip(DATASET_FILENAME)
+  print("Zip file successfully extracted")
+} else {
+  print("Zip file already extracted")
+}
 
-print(paste0("Changing it to: ", new_timeout, "s"))
 
-options(timeout = new_timeout)
-
-print("Downloading file...")
-
-download.file(url , file_name)
-
-print("File downloaded!")
-
-# Reversing to previous setting
-
-print(paste0("Reversing timeout option to: ", old_timeout, "s"))
-options(timeout = old_timeout)
