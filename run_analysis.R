@@ -79,7 +79,7 @@ data$Activity <- as.factor(data$Activity)
 tidy_data <- data %>% group_by(Activity, Subject) %>% summarise(across(.cols = everything(), mean, .names = "average_{col}"))
 
 # Write the output file
-write.table(tidy_data, paste0(OUTPUT_FILE_NAME, ".txt"))
+write.table(tidy_data, paste0(OUTPUT_FILE_NAME, ".txt"), row.name=FALSE)
 
 
 if (REMOVE_UNNECESSARY_OBJECTS) {
